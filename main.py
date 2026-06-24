@@ -22,9 +22,9 @@ class RestaurantBill:
         elif self.total_bill > 2_000_000:
             self.bill_type = "Lớn"
         elif self.total_bill > 500_000:
-            self.bill_type == "Trung Bình"
+            self.bill_type = "Trung Bình"
         else:
-            self.bill_type == "Nhỏ"
+            self.bill_type = "Nhỏ"
 class RestaurantBillManager:
     def __init__(self):
         self.bills = []
@@ -95,7 +95,7 @@ class RestaurantBillManager:
                 f"{bill.service_fee:<15}"
                 f"{bill.discount:<15}"
                 f"{bill.total_bill:<15}"
-                # f"{bill.bill_type:<15}"
+                f"{bill.bill_type:<15}"
             )
     def add_b(self):
         print("=== Thêm hóa đơn ===")
